@@ -1,0 +1,10 @@
+services:
+  - type: web
+    runtime: python
+    name: localization-classroom
+    plan: free
+    buildCommand: python -m py_compile server.py
+    startCommand: python server.py
+    envVars:
+      - key: ADMIN_KEY
+        generateValue: true
